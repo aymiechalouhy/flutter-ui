@@ -10,26 +10,29 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // context: give the full size of any device
     final size = MediaQuery.of(context).size;
-    //SafeArea top space
     return SafeArea(
       child: Scaffold(
         body: Container(
           width: size.width,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Colors.blue, Colors.lightBlue, Colors.pink])),
+              colors: [Colors.blue, Colors.lightBlue, Colors.pink])),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-            Text("let's sing", style: TextStyle(fontWeight: FontWeight.bold, fontSize:40 ),),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text("“Words make you think. \n Music makes you feel.” "),
+            mainAxisAlignment: MainAxisAlignment.center, 
+            children:  [
+            const Text("let's sing", style: TextStyle(fontWeight: FontWeight.bold, fontSize:40 ),
             ),
             
-           Image(image: AssetImage("assets/sing.png"))
+          const   SizedBox(
+               height: 20,
+             ),
+           const    Text("“Words make you think. \n Music makes you feel.”",
+              style: TextStyle(fontWeight: FontWeight.bold)
+              ),
+              SizedBox(
+               height: size.height /2.8,
+               child: const Image(image: AssetImage("assets/sing.png")))
           ]),
         ),
       ),
