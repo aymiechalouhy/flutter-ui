@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center, 
             children:  [
-            const Text("let's sing", style: TextStyle(fontWeight: FontWeight.bold, fontSize:40 ),
+            const Text("Let's Sing", style: TextStyle(fontWeight: FontWeight.bold, fontSize:40 ),
             ),
             
           const   SizedBox(
@@ -30,9 +30,21 @@ class _HomePageState extends State<HomePage> {
            const    Text("“Words make you think. \n Music makes you feel.”",
               style: TextStyle(fontWeight: FontWeight.bold)
               ),
-              SizedBox(
-               height: size.height /2.8,
-               child: const Image(image: AssetImage("assets/sing.png")))
+              Padding(
+                padding: const EdgeInsets.only(top:30),
+                child: SizedBox(
+                 height: size.height /2.8,
+                 child: const Image(image: AssetImage("assets/sing.png"))),
+              ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0)
+                ),
+                primary: Colors.white, elevation: 5),
+               child: const Text(
+              "Sing", style:TextStyle(fontSize: 20,color: Color.fromARGB(255, 0, 0, 0), )))
           ]),
         ),
       ),
